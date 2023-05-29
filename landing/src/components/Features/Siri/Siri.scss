@@ -1,0 +1,29 @@
+.feature-siri {
+    aspect-ratio: 1; 
+    // grid-row: span 2;
+    padding: 24px 32px 0;
+    background-color: #F9D0EF;
+    border-radius: 40px;
+
+    &-label {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    &-img {
+        margin-top: 24px;
+        margin-left: -8px;
+        img {
+            width: 80px;
+            margin-right: 24px;
+        }
+    }
+
+    &-sublabel {
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+    }
+}

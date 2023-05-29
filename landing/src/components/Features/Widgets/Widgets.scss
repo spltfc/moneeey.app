@@ -1,0 +1,47 @@
+.feature-widgets {
+    grid-column: span 2;
+    padding: 24px 32px 0;
+    background-color: #FFD8BD;
+    border-radius: 40px;
+
+    &-label {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    &-img {
+        margin-top: 24px;
+        margin-left: -8px;
+        position: relative;
+        &-1,
+        &-2,
+        &-3,
+        &-4 {
+            position: absolute;
+            width: 144px;
+        }
+        &-1 {
+            left: 0px;
+            top: 70px;
+        }
+        &-2 {
+            left: 15%;
+            top: 0px;
+        }
+        &-3 {
+            left: 30%;
+            top: 30px;
+        }
+        &-4 {
+            left: 45%;
+            top: 70px;
+        }
+        &-lock {
+            right: 0;
+            top: 22px;
+            position: absolute;
+            width: 240px;
+        }
+    }
+}

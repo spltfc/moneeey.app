@@ -1,0 +1,74 @@
+.main {
+    position: relative;
+
+    &-left {
+        width: 45%;
+        padding-top: 66px;
+    }
+
+    &-title {
+        padding: 12px 0;
+        margin-bottom: 32px;
+        font-family: 'Jost', sans-serif;
+        max-width: 600px;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 64px;
+        letter-spacing: -2px;
+        background-image: linear-gradient(360deg, #6c44ff 23.95%, rgb(65, 80, 255) 47.48%, #3b8eff 69.75%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-text {
+        width: 400px;
+        margin-top: 32px;
+        font-size: 26px;
+        line-height: 40px;
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    &-phones {
+        position: absolute;
+        right: 150px;
+        top: -90px;
+        pointer-events: none;
+
+        img {
+            width: 520px;
+        }
+    }
+
+    &-palki {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img {
+            position: absolute;
+            width: 300px;
+        }
+        .palka-1 {
+            transform: rotate(75deg);
+            bottom: 473px;   
+            right: -7px;
+        }
+        .palka-2 {
+            transform: rotate(45deg);
+            bottom: 280px;   
+            right: -30px;
+        }
+        .palka-3 {
+            transform: rotate(110deg);
+            bottom: 188px;   
+            right: -80px;
+        }
+        .palka-4 {
+            transform: rotate(-20deg);
+            bottom: 0px;   
+            right: -10px;
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+.feature-text-filled-square {
+    position: relative;
+    aspect-ratio: 1; 
+    grid-row: span 2;
+    padding: 24px 32px 0;
+    background-color: #E0EEBB;
+    border-radius: 40px;
+
+    &-label {
+        margin-left: 56px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    &-sublabel {
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    img {
+        position: absolute;
+        top: 30px;
+        left: 24px;
+        width: 50px;
+    }
+
+}
