@@ -1,0 +1,13 @@
+.feature-text-stroke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    border: 2px #88C4F0 solid;
+    border-radius: 40px;
+
+    &-label {
+        font-weight: 500;
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    // padding: 40px 0;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+
+    a {
+        display: inline-block;
+        margin-right: 40px;
+        color: #192EEF;
+    }
+}

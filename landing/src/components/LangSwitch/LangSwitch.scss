@@ -1,0 +1,21 @@
+.lang-switch {
+    height: 40px;
+    cursor: pointer;
+    img {
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px 4px 0 0;
+        pointer-events: none;
+    }
+    &-label {
+        display: inline-block;
+        vertical-align: top;
+        font-family: 'Jost', sans-serif;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    &:hover {
+        opacity: .8;
+    }
+}
