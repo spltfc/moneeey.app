@@ -5,15 +5,23 @@
     border-radius: 40px;
 
     &-label {
+        max-width: 390px;
         font-weight: 700;
         font-size: 22px;
         line-height: 30px;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            font-size: 21px;
+            line-height: 27px;
+        }
     }
 
     &-img {
         margin-top: 24px;
         margin-left: -8px;
         position: relative;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            display: none;
+        }
         &-1,
         &-2,
         &-3,
@@ -24,24 +32,52 @@
         &-1 {
             left: 0px;
             top: 70px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 0px;
+                top: 0px;
+            }
         }
         &-2 {
             left: 15%;
             top: 0px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 80px;
+                top: 70px;
+            }
         }
         &-3 {
             left: 30%;
             top: 30px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 40px;
+                top: 130px;
+            }
         }
         &-4 {
             left: 45%;
             top: 70px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 100px;
+                top: 70px;
+            }
         }
         &-lock {
             right: 0;
             top: 22px;
             position: absolute;
             width: 240px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                display: none;
+                left: 100px;
+                top: 70px;
+            }
         }
     }
+
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        height: auto;
+        padding-bottom: 24px;
+        margin-bottom: 12px;
+    }
+
 }

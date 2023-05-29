@@ -9,5 +9,14 @@
     &-label {
         font-weight: 500;
         font-size: 22px;
+        sup {
+            font-size: 11px;
+            opacity: .5;
+        }
+    }
+
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        height: 72px;
+        margin-bottom: 12px;
     }
 }

@@ -6,10 +6,8 @@ import './Footer.scss';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div>
-                <AppStoreBtn />
-            </div>
-            <div>
+            <AppStoreBtn />
+            <div className="footer-links">
                 <a href="/eula.html" target="_blank">
                     Terms of service / EULA
                 </a>

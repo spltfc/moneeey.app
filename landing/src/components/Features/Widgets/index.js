@@ -11,8 +11,7 @@ const Widgets = () => {
     return (
         <div className="feature-widgets">
             <div className="feature-widgets-label">
-                Add widgets to home or lock screen<br/>
-                to keep your numbers always in sight
+                Add widgets to home or lock screen to keep your numbers always in sight
             </div>
             <div className="feature-widgets-img">
                 <img src={Widget1Svg} className="feature-widgets-img-1" />

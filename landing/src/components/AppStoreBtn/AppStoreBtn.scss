@@ -2,5 +2,9 @@
     padding: 28px 0;
     a {display: inline-block; overflow: hidden; border-radius: 13px;}
     img {border-radius: 13px; width: 180px;}
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        text-align: center;
+        img {border-radius: 13px; width: 140px;}
+    }
 }
 

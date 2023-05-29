@@ -7,8 +7,8 @@ const Siri = () => {
     return (
         <div className="feature-siri">
             <div className="feature-siri-label">
-                Track your spendings<br/>
-                by voice command with<br/>
+                Track your spendings
+                by voice command with
                 Siri and Shortcuts
             </div>
             <div className="feature-siri-img">

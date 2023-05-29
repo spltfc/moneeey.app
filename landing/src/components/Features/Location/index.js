@@ -1,8 +1,8 @@
 import React from 'react';
 import LocationPng from '../../../images/distance.svg';
-import './TextFilledSquare.scss';
+import './Location.scss';
 
-const TextFilledSquare = ({label, sublabel}) => {
+const Location = ({label, sublabel}) => {
     return (
         <div className="feature-text-filled-square">
             <img src={LocationPng} />
@@ -16,4 +16,4 @@ const TextFilledSquare = ({label, sublabel}) => {
     );
 };
 
-export default TextFilledSquare;
+export default Location;

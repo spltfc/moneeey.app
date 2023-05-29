@@ -1,8 +1,8 @@
 .logo {
-    width: 179px;
-    height: 34px;
     img {
         width: 179px;
-        height: 34px;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            width: 140px;            
+        }
     }
 }
