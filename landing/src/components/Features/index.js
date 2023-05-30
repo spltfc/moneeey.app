@@ -15,14 +15,11 @@ const Features = () => {
             <TextStroke label={<>Fully offline</>} />
             <Siri />
             <Widgets />
-            <Location
-                label={<>Location suggestions for your spendings</>}
-                sublabel={`Moneeey will remember and suggest groups that you’ve used many times in the same places`}
-            />
-            <TextFilled label={<>Colored groups for your spendings and incomings</>} />
-            <TextFilled label={<>Monthly and weekly budgets to&nbsp;help you set limits</>} />
-            <TextFilled label={<>Simple and clear statistics with two different modes</>} />
-            <TextFilled label={<>Spendings tracking just in&nbsp;few simple taps. No&nbsp;time wasting</>} />
+            <Location />
+            <TextFilled label={<>Set up colors of&nbsp;your groups for better perception, or&nbsp;use them as&nbsp;extra categories</>} />
+            <TextFilled label={<>Achieve your financial goals with monthly and weekly customizable budgets</>} />
+            <TextFilled label={<>Simple and informative statistics with two different chart views</>} />
+            <TextFilled label={<>Time is&nbsp;money. We'll help keep them. Add spendings with a&nbsp;few taps in&nbsp;a&nbsp;few seconds</>} />
         </section>
     );
 };

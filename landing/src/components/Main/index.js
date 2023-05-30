@@ -20,10 +20,11 @@ const Main = () => {
                 </div>
                 <AppStoreBtn />
                 <div className="main-text">
-                    Most budget management apps have an outdated interface and overloaded functionality.
+                    {/* Most budget management apps have an outdated interface and overloaded functionality. */}
+                    The interface of many budget management apps is&nbsp;outdated, and their functionality is&nbsp;overloaded.
                     <br />
                     <br />
-                    <strong>We’ve made it simpler.</strong>
+                    <strong>We've made it simpler.</strong>
                 </div>
             </div>
             <div className="main-palki">
