@@ -1,0 +1,13 @@
+.features {
+    margin-top: 100px;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: auto 170px 170px;
+    column-gap: 16px;
+    row-gap: 16px;
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        display: block;
+        margin-top: 12px;
+    }
+}

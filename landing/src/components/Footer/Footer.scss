@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    // padding: 40px 0;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        display: block;
+    }
+
+
+    .app-store-btn {
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            display: block;
+            text-align: center;
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+    .footer-links {
+        a {
+            display: inline-block;
+            margin-right: 40px;
+            color: #192EEF;
+            @media (prefers-color-scheme: dark) {
+                color: #87bbe0;
+            }
+        }
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+        }
+    }
+}

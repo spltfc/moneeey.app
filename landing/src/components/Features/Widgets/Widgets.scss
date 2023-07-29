@@ -1,0 +1,93 @@
+.feature-widgets {
+    min-height: 300px;
+    grid-column: span 2;
+    padding: 24px 32px;
+    background-color: #FFD8BD;
+    border-radius: 40px;
+
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        height: auto;
+        min-height: 0;
+        padding-bottom: 24px;
+        margin-bottom: 12px;
+    }
+
+    &-label {
+        max-width: 460px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            font-size: 21px;
+            line-height: 27px;
+        }
+        @media (prefers-color-scheme: dark) {
+            color: #d1a07d;
+        }
+    }
+
+    &-img {
+        margin-top: 24px;
+        margin-left: -8px;
+        position: relative;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            display: none;
+        }
+        &-1,
+        &-2,
+        &-3,
+        &-4 {
+            position: absolute;
+            width: 144px;
+        }
+        &-1 {
+            left: 0px;
+            top: 70px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 0px;
+                top: 0px;
+            }
+        }
+        &-2 {
+            left: 15%;
+            top: 0px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 80px;
+                top: 70px;
+            }
+        }
+        &-3 {
+            left: 30%;
+            top: 30px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 40px;
+                top: 130px;
+            }
+        }
+        &-4 {
+            left: 45%;
+            top: 70px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                left: 100px;
+                top: 70px;
+            }
+        }
+        &-lock {
+            right: 0;
+            top: 22px;
+            position: absolute;
+            width: 240px;
+            @media screen and (max-width: 900px) and (min-width: 320px) {
+                display: none;
+                left: 100px;
+                top: 70px;
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #836047;
+        background-color: #83604722;
+    }
+
+}

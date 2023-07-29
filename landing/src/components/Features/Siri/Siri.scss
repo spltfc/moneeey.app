@@ -1,0 +1,50 @@
+.feature-siri {
+    min-height: 300px;
+    // grid-row: span 2;
+    padding: 24px 32px;
+    background-color: #F9D0EF;
+    border-radius: 40px;
+
+    &-label {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            font-size: 21px;
+            line-height: 27px;
+        }
+    }
+
+    &-img {
+        margin-top: 24px;
+        margin-left: -8px;
+        img {
+            width: 80px;
+            margin-right: 24px;
+        }
+    }
+
+    &-sublabel {
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        @media screen and (max-width: 900px) and (min-width: 320px) {
+            font-size: 21px;
+            line-height: 27px;
+        }
+    }
+
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        aspect-ratio: auto;
+        padding-bottom: 24px;
+        margin-bottom: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #8a5389;
+        background-color: #8a538922;
+        color: #d06dce;
+    }
+
+}

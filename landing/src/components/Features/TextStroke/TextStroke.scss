@@ -1,0 +1,28 @@
+.feature-text-stroke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    border: 2px #88C4F0 solid;
+    border-radius: 40px;
+
+    &-label {
+        font-weight: 500;
+        font-size: 22px;
+        sup {
+            font-size: 11px;
+            opacity: .5;
+        }
+    }
+
+    @media screen and (max-width: 900px) and (min-width: 320px) {
+        height: 72px;
+        margin-bottom: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        border: 2px rgb(31, 33, 60) solid;
+        background-color: rgb(31, 33, 60);
+        color: #83adee;
+    }
+}
