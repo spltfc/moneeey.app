@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.16e047fd.css",
-    "main.js": "/static/js/main.9a869d38.js",
+    "main.js": "/static/js/main.7fd4b627.js",
     "static/media/help-video.mp4": "/static/media/help-video.346a6a396a7a17c0d50a.mp4",
     "static/media/frame.png": "/static/media/frame.52df2a86caa5abe2617b.png",
     "static/media/phones.png": "/static/media/phones.7923483c23b2b0d76267.png",
@@ -19,10 +19,10 @@
     "static/media/widget3.svg": "/static/media/widget3.5568ecac5e0d5c47ac53be1f5c93a1b8.svg",
     "index.html": "/index.html",
     "main.16e047fd.css.map": "/static/css/main.16e047fd.css.map",
-    "main.9a869d38.js.map": "/static/js/main.9a869d38.js.map"
+    "main.7fd4b627.js.map": "/static/js/main.7fd4b627.js.map"
   },
   "entrypoints": [
     "static/css/main.16e047fd.css",
-    "static/js/main.9a869d38.js"
+    "static/js/main.7fd4b627.js"
   ]
 }
