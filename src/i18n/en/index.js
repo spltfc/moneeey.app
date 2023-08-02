@@ -20,5 +20,21 @@ export default {
             longFeature3: 'Simple and informative statistics with two different chart views',
             longFeature4: 'Time is money. We\'ll help keep both. Add spendings with a few taps in a few seconds.',
         },
+        faq: {
+            title: 'How to',
+            watch_all: 'Watch full video (1:56)',
+            step_addFirstSpending: 'Add your first spending',
+            step_addMoreGroups: 'Setup groups',
+            step_sortGroups: 'Reorder your groups',
+            step_addSpendings: 'Add more spendings',
+            step_timeline: 'Timeline screen',
+            step_editSpending: 'Edit spending',
+            step_changeMonth: 'View previous months',
+            step_statsForMonth: 'Statistics screen',
+            step_statsForGroup: 'Statistics for group',
+            step_createBudget: 'Create budget',
+            step_editBudget: 'Change budget limit or name',
+            step_widgets: 'Add widgets on home screen and lock screen',
+        },
     }
 };

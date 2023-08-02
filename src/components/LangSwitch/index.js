@@ -34,7 +34,7 @@ const LangSwitch = () => {
                 {
                     Object.keys(lngs).map((l) => {
                         if (l === lang) return null;
-                        return (<a key={l} href={l === 'en' ? '/' : `/${l}`} className="lang-switch-dropdown-label">
+                        return (<a key={l} href={(l === 'en' ? '/' : `/${l}/`) + window.location.hash} className="lang-switch-dropdown-label">
                             {lngs[l][1]}
                         </a>);
                     })

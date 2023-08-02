@@ -1,0 +1,126 @@
+.faq-page {
+    min-height: 100vh;
+}
+
+.faq-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 32px;
+    margin: 24px 0 12px;
+}
+
+.faq-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #111111aa;
+    background-color: #000;
+    z-index: 9999;
+    transform: translateX(0);
+    opacity: 0;
+    visibility: hidden;
+    // backdrop-filter: blur(12px);
+    //transition: transform .35s ease-out;
+    transition: opacity .3s ease, visibility .3s ease;
+    &.__visible {
+        //transform: translateX(-100%);
+        opacity: 1;
+        visibility: visible;
+    }
+    &-video {
+        position: relative;
+        height: 100%;
+        max-height: 680px;
+        //margin-top: -75px;
+        &-wrap {
+            width: 100%;
+            height: calc(100% - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-frame {
+            position: relative;
+            height: 100%;
+            z-index: 2;
+        }
+        &-video {
+            position: absolute;
+            margin-top: 12.5%;
+            left: 50%;
+            height: 86.8%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+    &-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        padding: 0 16px;
+        background-color: #1b1bb2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &-text {
+            padding: 0 24px;
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: 17px;
+        }
+        &-icon {
+            font-size: 16px;
+        }
+    }
+}
+
+.faq-steps {
+    .faq-step {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px #ffffff22 solid;
+        cursor: pointer;
+        &:last-child {
+            border-bottom: 0px;
+        }
+        &:hover {
+            .faq-step-play-btn {
+                opacity: 1;
+            }
+            .faq-step-number,
+            .faq-step-label {
+                opacity: 1;
+            }
+        }
+        &-number {
+            width: 24px;
+            margin-left: 12px;
+            font-size: 15px;
+            opacity: .5;
+            text-align: center;
+            transition: opacity .15s ease;
+        }
+        &-label {
+            margin-top: -2px;
+            flex: 1;
+            font-size: 17px;
+            line-height: 22px;
+            font-weight: 600;
+            opacity: .85;
+            transition: opacity .15s ease;
+        }
+        &-play-btn {
+            margin-right: 12px;
+            opacity: .15;
+            transition: opacity .15s ease;
+        }
+    }
+}
