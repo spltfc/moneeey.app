@@ -5,10 +5,10 @@ import LogoSVGDark from '../../images/logo-dark.svg';
 
 const Logo = () => {
     return (
-        <div className="logo">
+        <a href="#" className="logo">
             <img src={LogoSVG} className="lightmode" />
             <img src={LogoSVGDark} className="darkmode" />
-        </div>
+        </a>
     );
 };
 

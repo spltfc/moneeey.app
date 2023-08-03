@@ -21,8 +21,8 @@ export default {
             longFeature4: 'Time is money. We\'ll help keep both. Add spendings with a few taps in a few seconds.',
         },
         faq: {
-            title: 'How to',
-            watch_all: 'Watch full video (1:56)',
+            title: 'App guide',
+            watch_all: 'Watch full video',
             step_addFirstSpending: 'Add your first spending',
             step_addMoreGroups: 'Setup groups',
             step_sortGroups: 'Reorder your groups',
@@ -35,6 +35,8 @@ export default {
             step_createBudget: 'Create budget',
             step_editBudget: 'Change budget limit or name',
             step_widgets: 'Add widgets on home screen and lock screen',
+            pic_suggestsLabel: 'Location suggests',
+            pic_suggestsText: `1. Enable "Location suggests" option at group settings.\n\n2. Moneeey will remember places where you track spendings for this group, and will suggest this group next time.`,
         },
     }
 };

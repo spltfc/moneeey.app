@@ -8,6 +8,9 @@ const Footer = () => {
         <footer className="footer">
             <AppStoreBtn />
             <div className="footer-links">
+                <a href="#/help">
+                    App help
+                </a>
                 <a href="/eula.html" target="_blank">
                     Terms of service / EULA
                 </a>

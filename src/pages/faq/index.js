@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import './faq.scss';
 import HelpVideo from '../../images/help-video.mp4';
 import FramePng from '../../images/frame.png';
+import SuggestsPicPng from '../../images/suggests.png';
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -36,15 +37,22 @@ const timecodes = {
     widgets: 230,
 };
 
-
 const stepByTimecode = {};
 Object.keys(timecodes).forEach(k => {
     stepByTimecode[parseInt(timecodes[k], 10)] = k;
 });
 
+// yep! that's shitcoding
+const secToMin = (s) => {
+    let sec = `${s % 60}`;
+    if (sec.length === 1) sec = '0' + sec;
+    return `${Math.floor(s / 60)}:${sec}`;
+};
+
 const FAQ = () => {
     const {t} = useTranslation();
     const [activeStep, setActiveStep] = useState(null);
+    const [activePic, setActivePic] = useState(null);
     const video = useRef();
     const onTimeUpdate = useCallback(() => {
         const sortedTimecodes = Object.keys(stepByTimecode)
@@ -63,28 +71,66 @@ const FAQ = () => {
         video.current.play();
     };
 
-    const onBackClick = () => {
+    const onPicClick = (pic) => {
+        document.scrollingElement.style.overflow = 'hidden';
+        setActivePic(pic);
+    };
+
+    const onBackClick = ({target}) => {
+        if (target.className.includes('faq-overlay-label-replay')) return;
         document.scrollingElement.style.overflow = 'auto';
         video.current.pause();
         setActiveStep(null);
+        setActivePic(null);
+    };
+
+    const replay5 = () => {
+        video.current.pause();
+        video.current.currentTime = Math.max(0, video.current.currentTime - 5);
+        video.current.play();
+        return false;
     };
 
     useEffect(() => {
+        try {
+            video.current.playbackRate = .85;
+        } catch (e){}
         video.current.addEventListener('timeupdate', onTimeUpdate);
-        return () => video.current.removeEventListener('timeupdate', onTimeUpdate);
-    }, []);
+        return () => video.current?.removeEventListener('timeupdate', onTimeUpdate);
+    }, [video.current]);
 
     return (<div className='faq-page'>
         <Header />
         <h1 className='faq-title'>{t('faq.title')}</h1>
         <div className='faq-steps'>
+            <div className='faq-steps-full' onClick={() => onStepClick(steps[0])}>
+                <div className='faq-steps-full-play-btn material-symbols-rounded'>play_circle</div>
+                <div className='faq-steps-full-label'>
+                    {t('faq.watch_all')}
+                </div>
+            </div>
             {steps.map((step, i) => {
                 return (<div key={step} className='faq-step' onClick={() => onStepClick(step)}>
                     <div className='faq-step-play-btn material-symbols-rounded'>play_circle</div>
                     <div className='faq-step-label'>{t('faq.step_' + step)}</div>
-                    {/* <div className='faq-step-number'>{i + 1}</div> */}
+                    <div className='faq-step-number'>{secToMin(timecodes[step])}</div>
                 </div>);
             })}
+            <div className='faq-step' onClick={() => onPicClick('suggests')}>
+                <div className='faq-step-play-btn material-symbols-rounded'>imagesmode</div>
+                <div className='faq-step-label'>{t('faq.pic_suggestsLabel')}</div>
+            </div>
+        </div>
+        <div className={`faq-overlay-pic ${activePic !== null ? '__visible' : ''}`}>
+            <div className='faq-overlay-pic-image-wrap'>
+                <img src={SuggestsPicPng} className='faq-overlay-pic-image' />
+            </div>
+            <div className='faq-overlay-pic-label' onClick={onBackClick}>
+                <div className='faq-overlay-pic-label-icon material-symbols-rounded'>arrow_back_ios_new</div>
+                <div className='faq-overlay-pic-label-text'>
+                    {t(`faq.pic_suggestsText`)}
+                </div>
+            </div>
         </div>
         <div className={`faq-overlay ${activeStep !== null ? '__visible' : ''}`}>
             <div className='faq-overlay-video-wrap'>
@@ -106,9 +152,9 @@ const FAQ = () => {
             <div className='faq-overlay-label' onClick={onBackClick}>
                 <div className='faq-overlay-label-icon material-symbols-rounded'>arrow_back_ios_new</div>
                 <div className='faq-overlay-label-text'>
-                    {t(`faq.step_${activeStep}`)}
+                    {activeStep ? t(`faq.step_${activeStep}`) : null}
                 </div>
-                {/* <div className='faq-overlay-label-icon material-symbols-rounded'>replay</div> */}
+                <div className='faq-overlay-label-replay material-symbols-rounded' onClick={replay5}>replay_5</div>
             </div>
         </div>
     </div>);
